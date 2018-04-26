@@ -1,2 +1,2 @@
 # php_mysql
-conexion entre php y mysql. utilizando las librerias jquery, undrecorejs,boostrap y sweetalert para personalizar la frontend
+conexion entre php y mysql. utilizando en la parte frontend las librerias: jquery, undrecorejs,boostrapjs y sweetalertjs

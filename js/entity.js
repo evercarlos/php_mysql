@@ -14,7 +14,7 @@ $(document).ready(function () {
                 var td_2 = $('<td>' + item.dni + '</td>');
                 var td_3 = $('<td width="25%"></td>');
                 var a_edit = $('<a id="' + item.id + '" href="javascript:void(0)" class="btn btn-success edit_e">Editar</a>');
-                var a_delete = $('<a id="' + item.id + '" href="javascript:void(0)"  class="btn btn-danger delet_e">Eliminar</a>');
+                var a_delete = $('<a id="' + item.id + '" href="javascript:void(0)"  class="btn btn-danger delete_e">Eliminar</a>');
                 td_3.append(a_edit).append(a_delete);
                 tr.append(td_1).append(td_2).append(td_3);
                 //console.log('hola');
@@ -24,6 +24,11 @@ $(document).ready(function () {
                     var tr_ = $(this);
                     var tr_id = tr_.attr('id');
                     findEntity(tr_id);
+                });
+                e_grid.find('a.delete_e').click(function () {
+                    var tr_ = $(this);
+                    var tr_id = tr_.attr('id');
+                    deleteEntity(tr_id);
                 })
             });
         } else {
@@ -44,6 +49,19 @@ function findEntity(id) {
             e_id.val(data.id);
             e_name.val(data.name);
             e_dni.val(data.dni);
+        } else {
+            swal("error", "error!", "error");
+        }
+    }, 'json');
+}
+
+function deleteEntity(id) {
+    params = {
+        id: id
+    }
+    $.post('aplication/deleteEntity.php', params, function (response) {
+        if (response.status === true) {
+            swal("Good", "Eliminado Correctamente", "success");
         } else {
             swal("error", "error!", "error");
         }

@@ -3,11 +3,10 @@ var e_id = $("#e_id");
 var e_name = $("#e_name");
 var e_dni = $("#e_dni");
 
-$(document).ready(function () {
+function addgrid() {
     $.post('aplication/entityAll.php', function (response) {
         if (response.status === true) {
-            // con undercore
-            // e_grid.empty();
+            e_grid.empty();
             _.each(response.data, function (item) {
                 var tr = $('<tr></tr>');
                 var td_1 = $('<td>' + item.name + '</td>');
@@ -35,9 +34,41 @@ $(document).ready(function () {
             // con sweel
             swal("error", "error!", "error");
         }
-    }, 'json')
+    }, 'json');
+}
+
+$(document).ready(function () {
+
+    addgrid();
+
+    $("#save_entity").click(function () {
+        // para validaciones
+        console.log('hola');
+        var bval = true;
+        if (bval) {
+            params = {
+                'id': (e_id.val() === '') ? 0 : e_id.val(),
+                'name': e_name.val(),
+                'dni': e_dni.val()
+            }
+            $.post('aplication/createUpdateEntity.php', params, function (response) {
+                if (response.status) {
+                    clearEntity();
+                    addgrid();
+                    swal("Good", "Guardado correctamente", "success");
+                } else {
+                    swal("error", "error!", "error");
+                }
+            }, 'json');
+        }
+    });
 });
 
+function clearEntity() {
+    e_id.val('');
+    e_name.val('');
+    e_dni.val('');
+}
 
 function findEntity(id) {
     params = {
@@ -59,8 +90,10 @@ function deleteEntity(id) {
     params = {
         id: id
     }
+    
     $.post('aplication/deleteEntity.php', params, function (response) {
         if (response.status === true) {
+            addgrid();
             swal("Good", "Eliminado Correctamente", "success");
         } else {
             swal("error", "error!", "error");

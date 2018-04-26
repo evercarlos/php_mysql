@@ -11,12 +11,17 @@ $link = require_once "conecction.php";
 try {
     $sql = "SELECT * FROM entity";
     $result = mysql_query($sql) or die("Error de seleccion");
-    while ($row = mysql_fetch_array($result)) {
-        $dat[] = [
-            'id' => $row['id'],
-            'name' => $row['name'],
-            'dni' => $row['dni']
-        ];
+    //$dat = [];
+    if (mysql_num_rows($result) > 0) {
+        while ($row = mysql_fetch_array($result)) {
+            $dat[] = [
+                'id' => $row['id'],
+                'name' => $row['name'],
+                'dni' => $row['dni']
+            ];
+        }
+    } else {
+        throw new \Exception('debe ingresar clientes');
     }
     echo json_encode([
         'status' => true,

@@ -1,2 +1,4 @@
-# php_mysql
-conexion entre php y mysql. utilizando en la parte frontend las librerias: jquery, undrecorejs,boostrapjs y sweetalertjs
+# php_mysql 
+  - Conexión entre Php - Mysql. 
+  - funciones básicas de listar, guardar, editar y eliminar.
+  - librerias en la parte frontend: jquery, undrecorejs,boostrapjs y sweetalertjs

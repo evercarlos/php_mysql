@@ -41,11 +41,17 @@ $(document).ready(function () {
 
     addgrid();
 
+    $("#btn_new_entity").click(function () {
+        clearEntity();
+    });
+
     $("#save_entity").click(function () {
         // para validaciones
-        console.log('hola');
-        var bval = true;
-        if (bval) {
+        var b_val = true;
+        b_val = b_val && e_name.required();
+        b_val = b_val && e_dni.required();
+
+        if (b_val) {
             params = {
                 'id': (e_id.val() === '') ? 0 : e_id.val(),
                 'name': e_name.val(),
@@ -90,7 +96,6 @@ function deleteEntity(id) {
     params = {
         id: id
     }
-    
     $.post('aplication/deleteEntity.php', params, function (response) {
         if (response.status === true) {
             addgrid();

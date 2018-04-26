@@ -21,7 +21,8 @@ try {
             ];
         }
     } else {
-        throw new \Exception('debe ingresar clientes');
+        $dat = [];
+        // new \Exception('debe ingresar clientes');
     }
     echo json_encode([
         'status' => true,

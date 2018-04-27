@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c69693fe-1b6c-4cac-986b-e68cfcab0e40" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/aplication/entityAll.php" afterPath="$PROJECT_DIR$/aplication/entityAll.php" />
-    </list>
+    <list default="true" id="c69693fe-1b6c-4cac-986b-e68cfcab0e40" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +24,8 @@
       <file leaf-file-name="entityAll.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aplication/entityAll.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="513">
+              <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
               <folding>
                 <marker date="1524785930148" expanded="true" signature="148:168" ph="SELECT * FRO... entity" />
               </folding>
@@ -255,12 +252,12 @@
       <workItem from="1524762769152" duration="5791000" />
       <workItem from="1524779376496" duration="4137000" />
       <workItem from="1524785005373" duration="786000" />
-      <workItem from="1524785919087" duration="66000" />
+      <workItem from="1524785919087" duration="136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10780000" />
+    <option name="totallyTimeSpent" value="10850000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -616,8 +613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aplication/entityAll.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        <state relative-caret-position="513">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
           <folding>
             <marker date="1524785930148" expanded="true" signature="148:168" ph="SELECT * FRO... entity" />
           </folding>
